@@ -1,0 +1,51 @@
+dossier_id,nom_acteur,type_acteur,ville,quartier,type_parcelle,nb_parcelles_urbaines,nb_parcelles_rurales,nb_parcelles_total,prix_achat_fcfa,prix_revente_fcfa,delai_detention_jours,plus_value_pct,nb_liens_reseau,partage_telephone,partage_adresse,partage_iban,lien_familial_agent,agent_traitant,nb_dossiers_traites_meme_agent,nb_reventes,date_premier_achat,age_premier_achat,categorie_fraude,label
+D001,Adama Ouédraogo,citoyen,Ouagadougou,Pissy,urbaine,1,0,1,4500000,0,730,0,0,non,non,non,non,Konaté Moussa,1,0,2018-03-15,34,STANDARD,standard
+D002,Mariam Kaboré,citoyen,Ouagadougou,Gounghin,rurale,0,1,1,1200000,0,1460,0,0,non,non,non,non,Sawadogo Paul,1,0,2020-01-10,28,STANDARD,standard
+D003,Salif Traoré,citoyen,Bobo-Dioulasso,Secteur 22,urbaine,1,1,2,6000000,0,365,0,0,non,non,non,non,Coulibaly Brice,1,0,2019-07-20,45,STANDARD,standard
+D004,Fatimata Sawadogo,citoyen,Koudougou,Centre,rurale,0,2,2,2400000,0,1095,0,0,non,non,non,non,Zongo Inès,1,0,2017-11-05,52,STANDARD,standard
+D005,Issouf Compaoré,citoyen,Ouagadougou,Dapoya,urbaine,2,0,2,9000000,0,548,0,0,non,non,non,non,Konaté Moussa,1,0,2021-04-12,39,STANDARD,standard
+D006,Aminata Diallo,citoyen,Fada N'Gourma,Centre,rurale,0,1,1,800000,0,2190,0,0,non,non,non,non,Tapsoba Henri,1,0,2016-06-30,61,STANDARD,standard
+D007,Rasmané Zongo,citoyen,Ouagadougou,Tampouy,urbaine,1,0,1,5500000,0,912,0,0,non,non,non,non,Sawadogo Paul,1,0,2020-09-18,33,STANDARD,standard
+D008,Bintou Nikiema,citoyen,Ouagadougou,Wemtenga,rurale,0,2,2,1800000,0,730,0,0,non,non,non,non,Coulibaly Brice,1,0,2021-01-25,47,STANDARD,standard
+D009,Dramane Ouédraogo,citoyen,Banfora,Centre,urbaine,1,0,1,3200000,0,1825,0,0,non,non,non,non,Zongo Inès,1,0,2015-08-14,55,STANDARD,standard
+D010,Safi Kaboré,citoyen,Ouagadougou,Balkuy,rurale,0,1,1,1100000,0,456,0,0,non,non,non,non,Konaté Moussa,1,0,2022-03-01,29,STANDARD,standard
+D011,Wendyam Compaoré,citoyen,Ouagadougou,Cissin,urbaine,2,1,3,11000000,0,670,0,1,non,non,non,non,Sawadogo Paul,1,0,2019-12-20,43,STANDARD,standard
+D012,Hawa Sawadogo,citoyen,Tenkodogo,Centre,rurale,0,2,2,2100000,0,1095,0,0,non,non,non,non,Tapsoba Henri,1,0,2018-05-09,38,STANDARD,standard
+D013,Lassané Traoré,citoyen,Ouagadougou,Niogsin,urbaine,1,0,1,4800000,0,548,0,0,non,non,non,non,Coulibaly Brice,1,0,2021-08-17,36,STANDARD,standard
+D014,Roukiata Zongo,citoyen,Dédougou,Centre,rurale,0,1,1,950000,0,730,0,0,non,non,non,non,Zongo Inès,1,0,2020-02-28,44,STANDARD,standard
+D015,Moussa Ouédraogo,citoyen,Ouagadougou,Zone du Bois,urbaine,1,0,1,6200000,0,365,0,0,non,non,non,non,Konaté Moussa,1,0,2022-06-10,31,STANDARD,standard
+D016,Aïssata Kaboré,citoyen,Bobo-Dioulasso,Secteur 15,urbaine,2,0,2,13000000,0,912,0,0,non,non,non,non,Coulibaly Brice,1,0,2019-03-22,50,STANDARD,standard
+D017,Karim Compaoré,citoyen,Ouagadougou,Paspanga,rurale,0,1,1,1400000,0,1460,0,0,non,non,non,non,Sawadogo Paul,1,0,2017-07-04,42,STANDARD,standard
+D018,Oumou Diallo,citoyen,Koupèla,Centre,rurale,0,2,2,1900000,0,548,0,0,non,non,non,non,Tapsoba Henri,1,0,2021-10-15,35,STANDARD,standard
+D019,Youssouf Nikiema,citoyen,Ouagadougou,Gounghin,urbaine,1,0,1,5100000,0,730,0,0,non,non,non,non,Zongo Inès,1,0,2020-11-30,48,STANDARD,standard
+D020,Kadiatou Traoré,citoyen,Ouagadougou,Secteur 30,urbaine,1,1,2,7500000,0,1095,0,0,non,non,non,non,Konaté Moussa,2,0,2018-09-12,56,STANDARD,standard
+D021,Noufou Sawadogo,citoyen,Ouagadougou,Pissy,urbaine,2,0,2,9500000,0,820,0,1,non,non,non,non,Tapsoba Henri,1,0,2020-04-18,37,STANDARD,standard
+D022,Bibata Compaoré,citoyen,Manga,Centre,rurale,0,1,1,700000,0,1825,0,0,non,non,non,non,Coulibaly Brice,1,0,2016-12-01,60,STANDARD,standard
+D023,Inoussa Kaboré,citoyen,Ouagadougou,Koulouba,urbaine,2,1,3,14000000,0,730,0,0,non,non,non,non,Sawadogo Paul,1,0,2019-06-14,41,STANDARD,standard
+D024,Pélagie Ouédraogo,citoyen,Réo,Centre,rurale,0,2,2,2200000,0,548,0,0,non,non,non,non,Zongo Inès,1,0,2021-02-20,53,STANDARD,standard
+D025,Seydou Zongo,citoyen,Ouagadougou,Wemtenga,urbaine,1,0,1,4700000,0,365,0,0,non,non,non,non,Konaté Moussa,1,0,2022-01-08,32,STANDARD,standard
+D026,Issa Compaoré,citoyen,Ouagadougou,Tampouy,urbaine,1,0,1,5000000,0,912,0,0,non,non,non,non,Sawadogo Paul,1,0,2020-07-25,46,STANDARD,standard
+D027,Fatoumata Nikiema,citoyen,Ouagadougou,Dapoya,urbaine,2,0,2,10500000,0,730,0,0,non,non,non,non,Tapsoba Henri,1,0,2019-11-03,39,STANDARD,standard
+D028,Bassirou Traoré,citoyen,Bobo-Dioulasso,Secteur 8,rurale,0,1,1,1050000,0,1460,0,0,non,non,non,non,Coulibaly Brice,1,0,2017-04-16,63,STANDARD,standard
+D029,Mariétou Sawadogo,citoyen,Ouagadougou,Balkuy,urbaine,1,0,1,5300000,0,548,0,0,non,non,non,non,Zongo Inès,1,0,2021-09-22,34,STANDARD,standard
+D030,Hamidou Diallo,citoyen,Ouagadougou,Niogsin,rurale,0,1,1,1300000,0,1095,0,0,non,non,non,non,Konaté Moussa,1,0,2018-01-30,49,STANDARD,standard
+D031,Souleymane Kaboré,citoyen,Ouagadougou,Cissin,urbaine,2,0,2,8500000,9500000,25,11.76,1,non,non,non,non,Sawadogo Paul,1,2,2023-01-10,40,SPECULATION,speculateur
+D032,Aicha Compaoré,citoyen,Ouagadougou,Zone du Bois,urbaine,1,0,1,6000000,14500000,45,141.67,2,non,non,oui,non,Tapsoba Henri,1,1,2022-11-05,35,SPECULATION,speculateur
+D033,Gaoussou Traoré,citoyen,Bobo-Dioulasso,Secteur 25,urbaine,3,0,3,15000000,35000000,60,133.33,1,non,non,non,non,Coulibaly Brice,1,3,2022-09-15,44,SPECULATION,speculateur
+D034,Romuald Sawadogo,citoyen,Ouagadougou,Pissy,urbaine,2,1,3,12000000,28500000,30,137.50,2,non,oui,non,non,Zongo Inès,1,2,2023-03-01,38,SPECULATION,speculateur
+D035,Clarisse Ouédraogo,citoyen,Ouagadougou,Paspanga,urbaine,1,0,1,4500000,11200000,55,148.89,1,oui,non,non,non,Konaté Moussa,1,1,2023-02-14,31,SPECULATION,speculateur
+D036,Idrissa Kaboré,citoyen,Ouagadougou,Secteur 30,urbaine,4,0,4,18000000,0,1095,0,2,oui,oui,non,non,Sawadogo Paul,1,0,2019-05-20,47,ACCAPAREMENT,accapareur
+D037,Aziz Compaoré,citoyen,Ouagadougou,Tampouy,urbaine,5,1,6,25000000,0,730,0,3,oui,oui,oui,non,Tapsoba Henri,3,0,2018-08-10,53,ACCAPAREMENT,accapareur
+D038,Marcelline Traoré,promoteur,Ouagadougou,Koulouba,urbaine,6,0,6,30000000,0,548,0,2,non,non,non,non,Coulibaly Brice,1,0,2020-03-25,60,ACCAPAREMENT,accapareur
+D039,Noël Sawadogo,citoyen,Bobo-Dioulasso,Secteur 10,urbaine,4,2,6,22000000,0,1460,0,4,oui,oui,oui,non,Zongo Inès,2,1,2017-10-07,55,ACCAPAREMENT,accapareur
+D040,Yakubu Ouédraogo,citoyen,Ouagadougou,Gounghin,urbaine,3,3,6,20000000,0,2190,0,3,oui,oui,non,oui,Konaté Moussa,2,0,2015-12-01,62,ACCAPAREMENT,accapareur
+D041,Hamza Diallo,citoyen,Ouagadougou,Dapoya,urbaine,2,0,2,9000000,14000000,40,55.56,3,oui,oui,non,oui,Sawadogo Paul,2,2,2022-10-18,36,CAS_LIMITE,limite
+D042,Saidou Kaboré,agent_public,Ouagadougou,Wemtenga,urbaine,2,1,3,13000000,0,730,0,2,non,oui,non,oui,Kaboré Saidou,3,0,2019-07-30,50,CAS_LIMITE,limite
+D043,Flore Compaoré,citoyen,Koudougou,Centre,urbaine,1,2,3,9500000,13000000,85,36.84,2,oui,non,oui,non,Tapsoba Henri,2,1,2022-06-05,43,CAS_LIMITE,limite
+D044,Cheick Traoré,notaire,Ouagadougou,Pissy,urbaine,3,0,3,16000000,0,912,0,1,non,oui,non,oui,Traoré Cheick,2,1,2018-02-14,57,CAS_LIMITE,limite
+D045,Roukia Sawadogo,citoyen,Ouagadougou,Tampouy,urbaine,2,1,3,11000000,19500000,70,77.27,3,oui,oui,non,non,Zongo Inès,3,2,2021-12-28,41,CAS_LIMITE,limite
+D046,Kassoum Ouédraogo,citoyen,Ouagadougou,Cissin,urbaine,4,2,6,22000000,0,548,0,5,oui,oui,oui,oui,Sawadogo Paul,4,3,2020-08-22,39,FRAUDE_COMPLEXE,fraude
+D047,Ramata Kaboré,agent_public,Ouagadougou,Zone du Bois,urbaine,3,0,3,15500000,32000000,35,106.45,4,oui,oui,oui,oui,Kaboré Ramata,5,4,2022-04-10,44,FRAUDE_COMPLEXE,fraude
+D048,Adama Compaoré,promoteur,Bobo-Dioulasso,Secteur 20,urbaine,5,3,8,38000000,0,1095,0,6,oui,oui,oui,oui,Coulibaly Brice,3,5,2017-09-15,58,FRAUDE_COMPLEXE,fraude
+D049,Luc Traoré,notaire,Ouagadougou,Koulouba,urbaine,2,1,3,14000000,29000000,28,107.14,5,oui,oui,oui,oui,Traoré Luc,6,3,2023-01-20,47,FRAUDE_COMPLEXE,fraude
+D050,Mariam Sawadogo,citoyen,Ouagadougou,Gounghin,urbaine,4,2,6,26000000,55000000,20,111.54,7,oui,oui,oui,oui,Sawadogo Paul,5,6,2023-03-15,33,FRAUDE_COMPLEXE,fraude

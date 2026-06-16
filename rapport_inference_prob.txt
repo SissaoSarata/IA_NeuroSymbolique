@@ -1,0 +1,140 @@
+========================================================================
+  LANDGUARD NEURO-SYMBOLIC AI — RAPPORT D'INFÉRENCE PROBABILISTE
+  Partie 3 : ProbLog | Burkina Faso | 11/06/2026 23:01:04
+========================================================================
+
+  Échelle de criticité :
+    FAIBLE   (✓) : P < 0.30  — Aucune action immédiate
+    MOYEN    (►) : P ∈ [0.30, 0.60) — Surveillance renforcée
+    ÉLEVÉ    (▲) : P ∈ [0.60, 0.80) — Instruction approfondie
+    CRITIQUE (⚠) : P ≥ 0.80  — Procédure d'enquête obligatoire
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Prête-Nom & Accaparement (Ouagadougou)
+────────────────────────────────────────────────────────────────────────
+  Q01 — Prête-nom tél. : Idrissa Kaboré / Aziz Compaoré    CRITIQUE ⚠
+    [██████████████████████████████] 100.00%
+
+  Q02 — Prête-nom familial : Idrissa / Aziz                CRITIQUE ⚠
+    [██████████████████████████████] 100.00%
+
+  Q03 — Prête-nom : Kassoum / Mariam Sawadogo              CRITIQUE ⚠
+    [█████████████████████████████░] 100.00%
+
+  Q04 — Accaparement urbain : Idrissa Kaboré (Secteur 30)  CRITIQUE ⚠
+    [██████████████████████████████] 100.00%
+
+  Q05 — Réseau familial : Idrissa / Aziz / Noël            FAIBLE   ✓
+    [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.00%
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Spéculation Foncière
+────────────────────────────────────────────────────────────────────────
+  Q06 — Revente rapide : Romuald Sawadogo (30j, Pissy)     ÉLEVÉ    ▲
+    [█████████████████████░░░░░░░░░] 70.00%
+
+  Q07 — Plus-value anormale : Gaoussou Traoré (+133%, Bobo)  ÉLEVÉ    ▲
+    [██████████████████████░░░░░░░░] 75.00%
+
+  Q08 — Spéculateur confirmé : Romuald Sawadogo            MOYEN    ►
+    [█████████████░░░░░░░░░░░░░░░░░] 46.20%
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Conflits d'Intérêts
+────────────────────────────────────────────────────────────────────────
+  Q09 — Conflit familial : Paul Sawadogo → Kassoum         CRITIQUE ⚠
+    [████████████████████████░░░░░░] 80.00%
+
+  Q10 — Conflit familial : Paul Sawadogo → Mariam          CRITIQUE ⚠
+    [████████████████████████░░░░░░] 80.00%
+
+  Q11 — Auto-attribution : Ramata Kaboré (agent, Zone du Bois)  CRITIQUE ⚠
+    [████████████████████████████░░] 95.00%
+
+  Q12 — Auto-attribution : Luc Traoré (notaire, Koulouba)  CRITIQUE ⚠
+    [████████████████████████████░░] 95.00%
+
+  Q13 — Conflit notaire : Saidou Kaboré                    CRITIQUE ⚠
+    [███████████████████████████░░░] 90.00%
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Réseaux & Blanchiment
+────────────────────────────────────────────────────────────────────────
+  Q14 — Réseau circulaire : Kassoum→Ramata→Adama→Kassoum   CRITIQUE ⚠
+    [█████████████████████████░░░░░] 85.00%
+
+  Q15 — Réseau IBAN étendu : Kassoum / Ramata / Adama      FAIBLE   ✓
+    [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.00%
+
+  Q16 — Promoteur fantôme : Marcelline Traoré (Koulouba)   ÉLEVÉ    ▲
+    [█████████████████████░░░░░░░░░] 70.00%
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Fraudes Composites & Sophistiquées
+────────────────────────────────────────────────────────────────────────
+  Q17 — Fraude composite : Kassoum Ouédraogo (Cissin)      MOYEN    ►
+    [████████████████░░░░░░░░░░░░░░] 55.16%
+
+  Q18 — Fraude sophistiquée : Kassoum Ouédraogo            FAIBLE   ✓
+    [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.00%
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Suspicion Globale Multi-Signaux
+────────────────────────────────────────────────────────────────────────
+  Q19 — Suspicion globale : Idrissa Kaboré                 ÉLEVÉ    ▲
+    [████████████████████░░░░░░░░░░] 67.00%
+
+  Q20 — Suspicion globale : Kassoum Ouédraogo              CRITIQUE ⚠
+    [█████████████████████████████░] 98.50%
+
+  Q21 — Suspicion globale : Ramata Kaboré                  CRITIQUE ⚠
+    [█████████████████████████████░] 97.15%
+
+  Q22 — Suspicion globale : Romuald Sawadogo               FAIBLE   ✓
+    [██████░░░░░░░░░░░░░░░░░░░░░░░░] 23.10%
+
+  Q23 — Suspicion globale : Adama Ouédraogo (cas sain ✓)   FAIBLE   ✓
+    [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0.00%
+
+========================================================================
+  RÉSUMÉ GLOBAL DES ALERTES
+========================================================================
+
+  CRITIQUE ⚠ (12 alerte(s)) :
+    • Q01 — Prête-nom tél. : Idrissa Kaboré / Aziz Compaoré   P=1.0000
+    • Q02 — Prête-nom familial : Idrissa / Aziz               P=1.0000
+    • Q04 — Accaparement urbain : Idrissa Kaboré (Secteur 30) P=1.0000
+    • Q03 — Prête-nom : Kassoum / Mariam Sawadogo             P=1.0000
+    • Q20 — Suspicion globale : Kassoum Ouédraogo             P=0.9850
+    • Q21 — Suspicion globale : Ramata Kaboré                 P=0.9715
+    • Q11 — Auto-attribution : Ramata Kaboré (agent, Zone du Bois) P=0.9500
+    • Q12 — Auto-attribution : Luc Traoré (notaire, Koulouba) P=0.9500
+    • Q13 — Conflit notaire : Saidou Kaboré                   P=0.9000
+    • Q14 — Réseau circulaire : Kassoum→Ramata→Adama→Kassoum  P=0.8500
+    • Q09 — Conflit familial : Paul Sawadogo → Kassoum        P=0.8000
+    • Q10 — Conflit familial : Paul Sawadogo → Mariam         P=0.8000
+
+  ÉLEVÉ    ▲ (4 alerte(s)) :
+    • Q07 — Plus-value anormale : Gaoussou Traoré (+133%, Bobo) P=0.7500
+    • Q06 — Revente rapide : Romuald Sawadogo (30j, Pissy)    P=0.7000
+    • Q16 — Promoteur fantôme : Marcelline Traoré (Koulouba)  P=0.7000
+    • Q19 — Suspicion globale : Idrissa Kaboré                P=0.6700
+
+  MOYEN    ► (2 alerte(s)) :
+    • Q17 — Fraude composite : Kassoum Ouédraogo (Cissin)     P=0.5516
+    • Q08 — Spéculateur confirmé : Romuald Sawadogo           P=0.4620
+
+  FAIBLE   ✓ (5 alerte(s)) :
+    • Q22 — Suspicion globale : Romuald Sawadogo              P=0.2310
+    • Q05 — Réseau familial : Idrissa / Aziz / Noël           P=0.0000
+    • Q15 — Réseau IBAN étendu : Kassoum / Ramata / Adama     P=0.0000
+    • Q18 — Fraude sophistiquée : Kassoum Ouédraogo           P=0.0000
+    • Q23 — Suspicion globale : Adama Ouédraogo (cas sain ✓)  P=0.0000
+
+========================================================================
+  Total requêtes évaluées : 23/23
+  Alertes CRITIQUE : 12
+  Alertes ÉLEVÉES  : 4
+  Alertes MOYENNES : 2
+  Alertes FAIBLES  : 5
+========================================================================

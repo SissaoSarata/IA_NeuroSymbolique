@@ -1,0 +1,205 @@
+========================================================================
+  LANDGUARD AI — RAPPORT NEURO-SYMBOLIQUE (Partie 4)
+  DeepProbLog : Fusion PyTorch × Prolog
+  Contexte : Burkina Faso | 12/06/2026 10:00:50
+========================================================================
+
+  Architecture hybride :
+    • Couche neuronale  : FraudDetectionNet (12→64→32→16→4)
+    • Couche symbolique : Règles Prolog (knowledge_base_bf.pl)
+    • Couche hybride    : DeepProbLog — nn/4 prédicat neuronal
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Règle : FRAUDE_CONFIRMEE
+  ▌ Description : Fraude avérée (Neural=fraude + Accaparement symbolique)
+────────────────────────────────────────────────────────────────────────
+
+  Acteur : kassoum_ouedraogo
+    Prédiction NN  : FRAUDE (conf=35.7%)
+    Distribution   : std=0.201 | aty=0.271 | spe=0.172 | fra=0.357
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : idrissa_kabore
+    Prédiction NN  : ATYPIQUE (conf=31.5%)
+    Distribution   : std=0.257 | aty=0.315 | spe=0.200 | fra=0.228
+    Symbolique OK  : oui
+    Décision hybride → ○ Non déclenché
+
+  Acteur : adama_compaore
+    Prédiction NN  : FRAUDE (conf=32.4%)
+    Distribution   : std=0.203 | aty=0.308 | spe=0.165 | fra=0.324
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : ramata_kabore
+    Prédiction NN  : FRAUDE (conf=41.2%)
+    Distribution   : std=0.200 | aty=0.230 | spe=0.158 | fra=0.412
+    Symbolique OK  : non
+    Décision hybride → ○ Non déclenché
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Règle : FRAUDE_RESEAU
+  ▌ Description : Fraude réseau circulaire (Neural=fraude + Réseau symbolique)
+────────────────────────────────────────────────────────────────────────
+
+  Acteur : kassoum_ouedraogo
+    Prédiction NN  : FRAUDE (conf=35.7%)
+    Distribution   : std=0.201 | aty=0.271 | spe=0.172 | fra=0.357
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : mariam_sawadogo
+    Prédiction NN  : FRAUDE (conf=46.1%)
+    Distribution   : std=0.194 | aty=0.201 | spe=0.145 | fra=0.461
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : adama_compaore
+    Prédiction NN  : FRAUDE (conf=32.4%)
+    Distribution   : std=0.203 | aty=0.308 | spe=0.165 | fra=0.324
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Règle : SPECULATEUR_NS
+  ▌ Description : Spéculateur confirmé (Neural=speculateur + Symbolique)
+────────────────────────────────────────────────────────────────────────
+
+  Acteur : romuald_sawadogo
+    Prédiction NN  : STANDARD (conf=27.0%)
+    Distribution   : std=0.270 | aty=0.234 | spe=0.260 | fra=0.236
+    Symbolique OK  : oui
+    Décision hybride → ○ Non déclenché
+
+  Acteur : gaoussou_traore
+    Prédiction NN  : STANDARD (conf=27.8%)
+    Distribution   : std=0.278 | aty=0.236 | spe=0.277 | fra=0.209
+    Symbolique OK  : oui
+    Décision hybride → ○ Non déclenché
+
+  Acteur : aicha_compaore
+    Prédiction NN  : SPECULATEUR (conf=26.4%)
+    Distribution   : std=0.261 | aty=0.212 | spe=0.264 | fra=0.263
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : clarisse_ouedraogo
+    Prédiction NN  : STANDARD (conf=26.5%)
+    Distribution   : std=0.265 | aty=0.251 | spe=0.262 | fra=0.222
+    Symbolique OK  : oui
+    Décision hybride → ○ Non déclenché
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Règle : ACCAPAREUR_NS
+  ▌ Description : Accapareur (Neural=atypique + Accaparement symbolique)
+────────────────────────────────────────────────────────────────────────
+
+  Acteur : idrissa_kabore
+    Prédiction NN  : ATYPIQUE (conf=31.5%)
+    Distribution   : std=0.257 | aty=0.315 | spe=0.200 | fra=0.228
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : aziz_compaore
+    Prédiction NN  : ATYPIQUE (conf=31.8%)
+    Distribution   : std=0.227 | aty=0.318 | spe=0.190 | fra=0.266
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : noel_sawadogo
+    Prédiction NN  : INCONNU (conf=0.0%)
+    Distribution   : std=0.000 | aty=0.000 | spe=0.000 | fra=0.000
+    Symbolique OK  : oui
+    Décision hybride → ○ Non déclenché
+
+  Acteur : yakubu_ouedraogo
+    Prédiction NN  : ATYPIQUE (conf=37.5%)
+    Distribution   : std=0.224 | aty=0.375 | spe=0.178 | fra=0.224
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Règle : CONFLIT_RENFORCE
+  ▌ Description : Conflit d'intérêt renforcé (Neural + Symbolique)
+────────────────────────────────────────────────────────────────────────
+
+  Acteur : ramata_kabore
+    Prédiction NN  : FRAUDE (conf=41.2%)
+    Distribution   : std=0.200 | aty=0.230 | spe=0.158 | fra=0.412
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : luc_traore
+    Prédiction NN  : FRAUDE (conf=40.4%)
+    Distribution   : std=0.200 | aty=0.235 | spe=0.161 | fra=0.404
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : saidou_kabore
+    Prédiction NN  : ATYPIQUE (conf=34.8%)
+    Distribution   : std=0.249 | aty=0.348 | spe=0.187 | fra=0.215
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : paul_sawadogo
+    Prédiction NN  : FRAUDE (conf=35.7%)
+    Distribution   : std=0.201 | aty=0.271 | spe=0.172 | fra=0.357
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+────────────────────────────────────────────────────────────────────────
+  ▌ Règle : PROFIL_SAIN
+  ▌ Description : Profil sain confirmé (Neural=standard + Symbolique OK)
+────────────────────────────────────────────────────────────────────────
+
+  Acteur : adama_ouedraogo
+    Prédiction NN  : STANDARD (conf=28.9%)
+    Distribution   : std=0.289 | aty=0.245 | spe=0.230 | fra=0.237
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : mariam_kabore
+    Prédiction NN  : STANDARD (conf=30.2%)
+    Distribution   : std=0.302 | aty=0.256 | spe=0.220 | fra=0.222
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : salif_traore
+    Prédiction NN  : STANDARD (conf=29.1%)
+    Distribution   : std=0.291 | aty=0.258 | spe=0.224 | fra=0.228
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+  Acteur : rasmane_zongo
+    Prédiction NN  : STANDARD (conf=29.2%)
+    Distribution   : std=0.292 | aty=0.247 | spe=0.228 | fra=0.233
+    Symbolique OK  : oui
+    Décision hybride → ✅ DÉCLENCHÉ
+
+========================================================================
+  RÉSUMÉ DES DÉCISIONS NEURO-SYMBOLIQUES
+========================================================================
+
+  Alertes CRITIQUES (9) :
+    ⚠  kassoum_ouedraogo                   [fraude_confirmee]
+    ⚠  adama_compaore                      [fraude_confirmee]
+    ⚠  kassoum_ouedraogo                   [fraude_reseau]
+    ⚠  mariam_sawadogo                     [fraude_reseau]
+    ⚠  adama_compaore                      [fraude_reseau]
+    ⚠  ramata_kabore                       [conflit_renforce]
+    ⚠  luc_traore                          [conflit_renforce]
+    ⚠  saidou_kabore                       [conflit_renforce]
+    ⚠  paul_sawadogo                       [conflit_renforce]
+
+  Alertes CONFIRMÉES (8) :
+    ▲  aicha_compaore                      [speculateur_ns]
+    ▲  idrissa_kabore                      [accapareur_ns]
+    ▲  aziz_compaore                       [accapareur_ns]
+    ▲  yakubu_ouedraogo                    [accapareur_ns]
+    ▲  adama_ouedraogo                     [profil_sain]
+    ▲  mariam_kabore                       [profil_sain]
+    ▲  salif_traore                        [profil_sain]
+    ▲  rasmane_zongo                       [profil_sain]
+
+========================================================================

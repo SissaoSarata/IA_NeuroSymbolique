@@ -1,0 +1,44 @@
+{
+  "min_vals": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.054794520139694214,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.2800000011920929
+  ],
+  "max_vals": [
+    6.0,
+    3.0,
+    8.0,
+    60.0,
+    2.48888897895813,
+    6.0,
+    7.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.6299999952316284
+  ],
+  "feature_names": [
+    "nb_parcelles_urbaines",
+    "nb_parcelles_rurales",
+    "nb_parcelles_total",
+    "frequence_revente",
+    "ratio_plus_value",
+    "delai_detention_norm",
+    "nb_liens_reseau",
+    "partage_telephone",
+    "partage_adresse",
+    "partage_iban",
+    "lien_familial_agent",
+    "age_norm"
+  ]
+}

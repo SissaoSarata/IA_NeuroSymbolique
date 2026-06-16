@@ -1,0 +1,740 @@
+════════════════════════════════════════════════════════════════════
+
+LANDGUARD NEURO-SYMBOLIC AI — RAPPORT CONSOLIDÉ FINAL
+Burkina Faso — 50 dossiers fonciers | Généré le 11/06/2026 15:22:39
+════════════════════════════════════════════════════════════════════
+
+ARCHITECTURE DU SYSTÈME :
+  Couche 1 — Logique de Description  : knowledge_base_bf.pl (TBox + ABox)
+  Couche 2 — Raisonnement Prolog     : rules.pl (16 règles A/B/C/D)
+  Couche 3 — ProbLog                 : probabilistic_rules.pl (23 requêtes)
+  Couche 4 — PyTorch (neuronal)      : FraudDetectionNet 12→64→32→16→4
+  Couche 5 — DeepProbLog (hybride)   : nn/4 prédicat + règles NS
+  Couche 6 — XAI                     : explainability.pl + rapport
+
+────────────────────────────────────────────────────────────────────
+SYNTHÈSE GLOBALE DES DÉCISIONS
+────────────────────────────────────────────────────────────────────
+
+  ⚠  CRITIQUE :  17 acteur(s)
+       → Aicha Compaoré                      NN=      fraude score=10
+       → Gaoussou Traoré                     NN= speculateur score=8
+       → Romuald Sawadogo                    NN=      fraude score=10
+       → Clarisse Ouédraogo                  NN=      fraude score=10
+       → Idrissa Kaboré                      NN=    atypique score=8
+  ▲     ÉLEVÉ :  16 acteur(s)
+       → Salif Traoré                        NN=      fraude score=7
+       → Fatimata Sawadogo                   NN=      fraude score=5
+       → Aminata Diallo                      NN=      fraude score=5
+       → Bintou Nikiema                      NN=      fraude score=5
+       → Dramane Ouédraogo                   NN=      fraude score=5
+  ►     MOYEN :   9 acteur(s)
+       → Adama Ouédraogo                     NN=    standard score=3
+       → Mariam Kaboré                       NN=    standard score=3
+       → Issouf Compaoré                     NN=    atypique score=3
+       → Rasmané Zongo                       NN=    standard score=3
+       → Lassané Traoré                      NN=    atypique score=3
+  ✓    FAIBLE :   8 acteur(s)
+       → Safi Kaboré                         NN=    standard score=1
+       → Roukiata Zongo                      NN=    standard score=1
+       → Moussa Ouédraogo                    NN=    standard score=1
+       → Karim Compaoré                      NN=    standard score=1
+       → Seydou Zongo                        NN=    standard score=1
+
+────────────────────────────────────────────────────────────────────
+DÉTAIL PAR ACTEUR
+────────────────────────────────────────────────────────────────────
+
+
+  ⚠ [CRITIQUE] Aicha Compaoré
+     Ville/Quartier : Ouagadougou / Zone du Bois
+     Label réel     : SPECULATEUR
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=34.0%)
+       Dist. : std=0.146 | aty=0.185 | spe=0.329 | fra=0.340
+     ▸ PROLOG → 4 règle(s) déclenchée(s)
+       [B1] Revente ultra-rapide (45j < 90j)
+       [B2] Plus-value anormale (141.7% > 80%)
+       [B3] Spéculateur confirmé (rapide + plus-value)
+       [D3] Réseau circulaire probable (IBAN+liens)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Romuald Sawadogo
+     Ville/Quartier : Ouagadougou / Pissy
+     Label réel     : SPECULATEUR
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=36.7%)
+       Dist. : std=0.126 | aty=0.220 | spe=0.287 | fra=0.367
+     ▸ PROLOG → 4 règle(s) déclenchée(s)
+       [A4] Accaparement familial groupé
+       [B1] Revente ultra-rapide (30j < 90j)
+       [B2] Plus-value anormale (137.5% > 80%)
+       [B3] Spéculateur confirmé (rapide + plus-value)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Clarisse Ouédraogo
+     Ville/Quartier : Ouagadougou / Paspanga
+     Label réel     : SPECULATEUR
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=34.9%)
+       Dist. : std=0.147 | aty=0.229 | spe=0.275 | fra=0.349
+     ▸ PROLOG → 4 règle(s) déclenchée(s)
+       [B1] Revente ultra-rapide (55j < 90j)
+       [B2] Plus-value anormale (148.9% > 80%)
+       [B3] Spéculateur confirmé (rapide + plus-value)
+       [D1] Prête-nom téléphone (contact partagé)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Aziz Compaoré
+     Ville/Quartier : Ouagadougou / Tampouy
+     Label réel     : ACCAPAREUR
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=47.2%)
+       Dist. : std=0.058 | aty=0.332 | spe=0.138 | fra=0.472
+     ▸ PROLOG → 7 règle(s) déclenchée(s)
+       [A1] Accaparement urbain (≥4 parcelles urbaines)
+       [A3] Multipropriété excessive (≥6 parcelles total)
+       [A4] Accaparement familial groupé
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Yakubu Ouédraogo
+     Ville/Quartier : Ouagadougou / Gounghin
+     Label réel     : ACCAPAREUR
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=53.6%)
+       Dist. : std=0.048 | aty=0.310 | spe=0.106 | fra=0.536
+     ▸ PROLOG → 6 règle(s) déclenchée(s)
+       [A3] Multipropriété excessive (≥6 parcelles total)
+       [A4] Accaparement familial groupé
+       [B4] Non-mise en valeur (>180j sans cession)
+       [C2] Conflit familial avec agent traitant
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Saidou Kaboré
+     Ville/Quartier : Ouagadougou / Wemtenga
+     Label réel     : LIMITE
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=45.2%)
+       Dist. : std=0.080 | aty=0.332 | spe=0.136 | fra=0.452
+     ▸ PROLOG → 6 règle(s) déclenchée(s)
+       [A4] Accaparement familial groupé
+       [B4] Non-mise en valeur (>180j sans cession)
+       [C1] Auto-attribution / conflit direct
+       [C2] Conflit familial avec agent traitant
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Cheick Traoré
+     Ville/Quartier : Ouagadougou / Pissy
+     Label réel     : LIMITE
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=45.1%)
+       Dist. : std=0.069 | aty=0.360 | spe=0.120 | fra=0.451
+     ▸ PROLOG → 4 règle(s) déclenchée(s)
+       [C1] Auto-attribution / conflit direct
+       [C2] Conflit familial avec agent traitant
+       [C4] Conflit notaire (contacts partagés)
+       [D2] Prête-nom adresse+famille
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Kassoum Ouédraogo
+     Ville/Quartier : Ouagadougou / Cissin
+     Label réel     : FRAUDE
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=62.2%)
+       Dist. : std=0.047 | aty=0.216 | spe=0.114 | fra=0.622
+     ▸ PROLOG → 9 règle(s) déclenchée(s)
+       [A1] Accaparement urbain (≥4 parcelles urbaines)
+       [A3] Multipropriété excessive (≥6 parcelles total)
+       [A4] Accaparement familial groupé
+       [C2] Conflit familial avec agent traitant
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Ramata Kaboré
+     Ville/Quartier : Ouagadougou / Zone du Bois
+     Label réel     : FRAUDE
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=64.5%)
+       Dist. : std=0.038 | aty=0.212 | spe=0.105 | fra=0.645
+     ▸ PROLOG → 11 règle(s) déclenchée(s)
+       [A4] Accaparement familial groupé
+       [B1] Revente ultra-rapide (35j < 90j)
+       [B2] Plus-value anormale (106.5% > 80%)
+       [B3] Spéculateur confirmé (rapide + plus-value)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Adama Compaoré
+     Ville/Quartier : Bobo-Dioulasso / Secteur 20
+     Label réel     : FRAUDE
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=67.3%)
+       Dist. : std=0.030 | aty=0.207 | spe=0.090 | fra=0.673
+     ▸ PROLOG → 9 règle(s) déclenchée(s)
+       [A1] Accaparement urbain (≥4 parcelles urbaines)
+       [A3] Multipropriété excessive (≥6 parcelles total)
+       [A4] Accaparement familial groupé
+       [C2] Conflit familial avec agent traitant
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Luc Traoré
+     Ville/Quartier : Ouagadougou / Koulouba
+     Label réel     : FRAUDE
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=64.4%)
+       Dist. : std=0.041 | aty=0.208 | spe=0.107 | fra=0.644
+     ▸ PROLOG → 12 règle(s) déclenchée(s)
+       [A4] Accaparement familial groupé
+       [B1] Revente ultra-rapide (28j < 90j)
+       [B2] Plus-value anormale (107.1% > 80%)
+       [B3] Spéculateur confirmé (rapide + plus-value)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Mariam Sawadogo
+     Ville/Quartier : Ouagadougou / Gounghin
+     Label réel     : FRAUDE
+     Score fusion   : 10 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=73.0%)
+       Dist. : std=0.029 | aty=0.144 | spe=0.097 | fra=0.730
+     ▸ PROLOG → 12 règle(s) déclenchée(s)
+       [A1] Accaparement urbain (≥4 parcelles urbaines)
+       [A3] Multipropriété excessive (≥6 parcelles total)
+       [A4] Accaparement familial groupé
+       [B1] Revente ultra-rapide (20j < 90j)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Gaoussou Traoré
+     Ville/Quartier : Bobo-Dioulasso / Secteur 25
+     Label réel     : SPECULATEUR
+     Score fusion   : 8 pts
+
+     ▸ NEURAL  → SPECULATEUR (confiance=32.7%)
+       Dist. : std=0.155 | aty=0.196 | spe=0.327 | fra=0.323
+     ▸ PROLOG → 3 règle(s) déclenchée(s)
+       [B1] Revente ultra-rapide (60j < 90j)
+       [B2] Plus-value anormale (133.3% > 80%)
+       [B3] Spéculateur confirmé (rapide + plus-value)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Idrissa Kaboré
+     Ville/Quartier : Ouagadougou / Secteur 30
+     Label réel     : ACCAPAREUR
+     Score fusion   : 8 pts
+
+     ▸ NEURAL  → ATYPIQUE (confiance=40.6%)
+       Dist. : std=0.079 | aty=0.406 | spe=0.126 | fra=0.389
+     ▸ PROLOG → 4 règle(s) déclenchée(s)
+       [A1] Accaparement urbain (≥4 parcelles urbaines)
+       [A4] Accaparement familial groupé
+       [B4] Non-mise en valeur (>180j sans cession)
+       [D1] Prête-nom téléphone (contact partagé)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Marcelline Traoré
+     Ville/Quartier : Ouagadougou / Koulouba
+     Label réel     : ACCAPAREUR
+     Score fusion   : 8 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=34.0%)
+       Dist. : std=0.138 | aty=0.311 | spe=0.210 | fra=0.340
+     ▸ PROLOG → 4 règle(s) déclenchée(s)
+       [A1] Accaparement urbain (≥4 parcelles urbaines)
+       [A3] Multipropriété excessive (≥6 parcelles total)
+       [A4] Accaparement familial groupé
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Noël Sawadogo
+     Ville/Quartier : Bobo-Dioulasso / Secteur 10
+     Label réel     : ACCAPAREUR
+     Score fusion   : 8 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=49.4%)
+       Dist. : std=0.058 | aty=0.309 | spe=0.140 | fra=0.493
+     ▸ PROLOG → 6 règle(s) déclenchée(s)
+       [A1] Accaparement urbain (≥4 parcelles urbaines)
+       [A3] Multipropriété excessive (≥6 parcelles total)
+       [A4] Accaparement familial groupé
+       [D1] Prête-nom téléphone (contact partagé)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ⚠ [CRITIQUE] Hamza Diallo
+     Ville/Quartier : Ouagadougou / Dapoya
+     Label réel     : LIMITE
+     Score fusion   : 8 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=50.5%)
+       Dist. : std=0.062 | aty=0.303 | spe=0.129 | fra=0.505
+     ▸ PROLOG → 5 règle(s) déclenchée(s)
+       [A4] Accaparement familial groupé
+       [B1] Revente ultra-rapide (40j < 90j)
+       [C2] Conflit familial avec agent traitant
+       [D1] Prête-nom téléphone (contact partagé)
+     ▸ DÉCISION FINALE → CRITIQUE
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Salif Traoré
+     Ville/Quartier : Bobo-Dioulasso / Secteur 22
+     Label réel     : STANDARD
+     Score fusion   : 7 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=26.1%)
+       Dist. : std=0.242 | aty=0.258 | spe=0.239 | fra=0.261
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Souleymane Kaboré
+     Ville/Quartier : Ouagadougou / Cissin
+     Label réel     : SPECULATEUR
+     Score fusion   : 7 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=29.3%)
+       Dist. : std=0.193 | aty=0.227 | spe=0.287 | fra=0.293
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B1] Revente ultra-rapide (25j < 90j)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Flore Compaoré
+     Ville/Quartier : Koudougou / Centre
+     Label réel     : LIMITE
+     Score fusion   : 7 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=39.1%)
+       Dist. : std=0.123 | aty=0.259 | spe=0.227 | fra=0.391
+     ▸ PROLOG → 3 règle(s) déclenchée(s)
+       [B1] Revente ultra-rapide (85j < 90j)
+       [D1] Prête-nom téléphone (contact partagé)
+       [D3] Réseau circulaire probable (IBAN+liens)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Roukia Sawadogo
+     Ville/Quartier : Ouagadougou / Tampouy
+     Label réel     : LIMITE
+     Score fusion   : 7 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=42.8%)
+       Dist. : std=0.087 | aty=0.310 | spe=0.174 | fra=0.428
+     ▸ PROLOG → 3 règle(s) déclenchée(s)
+       [A4] Accaparement familial groupé
+       [B1] Revente ultra-rapide (70j < 90j)
+       [D1] Prête-nom téléphone (contact partagé)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Fatimata Sawadogo
+     Ville/Quartier : Koudougou / Centre
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=27.3%)
+       Dist. : std=0.243 | aty=0.244 | spe=0.239 | fra=0.273
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Aminata Diallo
+     Ville/Quartier : Fada N'Gourma / Centre
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=27.3%)
+       Dist. : std=0.267 | aty=0.230 | spe=0.230 | fra=0.273
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Bintou Nikiema
+     Ville/Quartier : Ouagadougou / Wemtenga
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=26.8%)
+       Dist. : std=0.245 | aty=0.247 | spe=0.240 | fra=0.268
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Dramane Ouédraogo
+     Ville/Quartier : Banfora / Centre
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=26.8%)
+       Dist. : std=0.265 | aty=0.245 | spe=0.223 | fra=0.268
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Wendyam Compaoré
+     Ville/Quartier : Ouagadougou / Cissin
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=28.1%)
+       Dist. : std=0.222 | aty=0.260 | spe=0.237 | fra=0.281
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Hawa Sawadogo
+     Ville/Quartier : Tenkodogo / Centre
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=27.6%)
+       Dist. : std=0.242 | aty=0.252 | spe=0.231 | fra=0.276
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Oumou Diallo
+     Ville/Quartier : Koupèla / Centre
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=27.3%)
+       Dist. : std=0.240 | aty=0.252 | spe=0.236 | fra=0.273
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Kadiatou Traoré
+     Ville/Quartier : Ouagadougou / Secteur 30
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=27.2%)
+       Dist. : std=0.238 | aty=0.253 | spe=0.236 | fra=0.272
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Bibata Compaoré
+     Ville/Quartier : Manga / Centre
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=26.9%)
+       Dist. : std=0.264 | aty=0.235 | spe=0.232 | fra=0.269
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Inoussa Kaboré
+     Ville/Quartier : Ouagadougou / Koulouba
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=28.0%)
+       Dist. : std=0.224 | aty=0.258 | spe=0.238 | fra=0.280
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Pélagie Ouédraogo
+     Ville/Quartier : Réo / Centre
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=26.8%)
+       Dist. : std=0.244 | aty=0.243 | spe=0.245 | fra=0.268
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ▲ [ÉLEVÉ] Bassirou Traoré
+     Ville/Quartier : Bobo-Dioulasso / Secteur 8
+     Label réel     : STANDARD
+     Score fusion   : 5 pts
+
+     ▸ NEURAL  → FRAUDE (confiance=27.0%)
+       Dist. : std=0.255 | aty=0.240 | spe=0.236 | fra=0.270
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → ÉLEVÉ
+       → Procédure d'instruction approfondie recommandée
+
+  ► [MOYEN] Adama Ouédraogo
+     Ville/Quartier : Ouagadougou / Pissy
+     Label réel     : STANDARD
+     Score fusion   : 3 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.7%)
+       Dist. : std=0.267 | aty=0.259 | spe=0.231 | fra=0.243
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → MOYEN
+       → Surveillance renforcée recommandée
+
+  ► [MOYEN] Mariam Kaboré
+     Ville/Quartier : Ouagadougou / Gounghin
+     Label réel     : STANDARD
+     Score fusion   : 3 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.6%)
+       Dist. : std=0.266 | aty=0.245 | spe=0.231 | fra=0.257
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → MOYEN
+       → Surveillance renforcée recommandée
+
+  ► [MOYEN] Issouf Compaoré
+     Ville/Quartier : Ouagadougou / Dapoya
+     Label réel     : STANDARD
+     Score fusion   : 3 pts
+
+     ▸ NEURAL  → ATYPIQUE (confiance=27.6%)
+       Dist. : std=0.234 | aty=0.276 | spe=0.227 | fra=0.263
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → MOYEN
+       → Surveillance renforcée recommandée
+
+  ► [MOYEN] Rasmané Zongo
+     Ville/Quartier : Ouagadougou / Tampouy
+     Label réel     : STANDARD
+     Score fusion   : 3 pts
+
+     ▸ NEURAL  → STANDARD (confiance=27.1%)
+       Dist. : std=0.271 | aty=0.253 | spe=0.234 | fra=0.243
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → MOYEN
+       → Surveillance renforcée recommandée
+
+  ► [MOYEN] Lassané Traoré
+     Ville/Quartier : Ouagadougou / Niogsin
+     Label réel     : STANDARD
+     Score fusion   : 3 pts
+
+     ▸ NEURAL  → ATYPIQUE (confiance=26.5%)
+       Dist. : std=0.264 | aty=0.265 | spe=0.228 | fra=0.243
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → MOYEN
+       → Surveillance renforcée recommandée
+
+  ► [MOYEN] Aïssata Kaboré
+     Ville/Quartier : Bobo-Dioulasso / Secteur 15
+     Label réel     : STANDARD
+     Score fusion   : 3 pts
+
+     ▸ NEURAL  → ATYPIQUE (confiance=27.5%)
+       Dist. : std=0.231 | aty=0.275 | spe=0.225 | fra=0.269
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → MOYEN
+       → Surveillance renforcée recommandée
+
+  ► [MOYEN] Youssouf Nikiema
+     Ville/Quartier : Ouagadougou / Gounghin
+     Label réel     : STANDARD
+     Score fusion   : 3 pts
+
+     ▸ NEURAL  → ATYPIQUE (confiance=26.0%)
+       Dist. : std=0.257 | aty=0.260 | spe=0.228 | fra=0.255
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → MOYEN
+       → Surveillance renforcée recommandée
+
+  ► [MOYEN] Noufou Sawadogo
+     Ville/Quartier : Ouagadougou / Pissy
+     Label réel     : STANDARD
+     Score fusion   : 3 pts
+
+     ▸ NEURAL  → ATYPIQUE (confiance=27.3%)
+       Dist. : std=0.234 | aty=0.273 | spe=0.226 | fra=0.267
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → MOYEN
+       → Surveillance renforcée recommandée
+
+  ► [MOYEN] Fatoumata Nikiema
+     Ville/Quartier : Ouagadougou / Dapoya
+     Label réel     : STANDARD
+     Score fusion   : 3 pts
+
+     ▸ NEURAL  → ATYPIQUE (confiance=27.4%)
+       Dist. : std=0.235 | aty=0.274 | spe=0.227 | fra=0.264
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → MOYEN
+       → Surveillance renforcée recommandée
+
+  ✓ [FAIBLE] Safi Kaboré
+     Ville/Quartier : Ouagadougou / Balkuy
+     Label réel     : STANDARD
+     Score fusion   : 1 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.2%)
+       Dist. : std=0.262 | aty=0.256 | spe=0.234 | fra=0.248
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → FAIBLE
+       → Profil dans les normes réglementaires
+
+  ✓ [FAIBLE] Roukiata Zongo
+     Ville/Quartier : Dédougou / Centre
+     Label réel     : STANDARD
+     Score fusion   : 1 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.5%)
+       Dist. : std=0.265 | aty=0.249 | spe=0.236 | fra=0.249
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → FAIBLE
+       → Profil dans les normes réglementaires
+
+  ✓ [FAIBLE] Moussa Ouédraogo
+     Ville/Quartier : Ouagadougou / Zone du Bois
+     Label réel     : STANDARD
+     Score fusion   : 1 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.7%)
+       Dist. : std=0.267 | aty=0.262 | spe=0.233 | fra=0.239
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → FAIBLE
+       → Profil dans les normes réglementaires
+
+  ✓ [FAIBLE] Karim Compaoré
+     Ville/Quartier : Ouagadougou / Paspanga
+     Label réel     : STANDARD
+     Score fusion   : 1 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.9%)
+       Dist. : std=0.269 | aty=0.241 | spe=0.233 | fra=0.256
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → FAIBLE
+       → Profil dans les normes réglementaires
+
+  ✓ [FAIBLE] Seydou Zongo
+     Ville/Quartier : Ouagadougou / Wemtenga
+     Label réel     : STANDARD
+     Score fusion   : 1 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.6%)
+       Dist. : std=0.266 | aty=0.263 | spe=0.231 | fra=0.240
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → FAIBLE
+       → Profil dans les normes réglementaires
+
+  ✓ [FAIBLE] Issa Compaoré
+     Ville/Quartier : Ouagadougou / Tampouy
+     Label réel     : STANDARD
+     Score fusion   : 1 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.4%)
+       Dist. : std=0.264 | aty=0.257 | spe=0.227 | fra=0.252
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → FAIBLE
+       → Profil dans les normes réglementaires
+
+  ✓ [FAIBLE] Mariétou Sawadogo
+     Ville/Quartier : Ouagadougou / Balkuy
+     Label réel     : STANDARD
+     Score fusion   : 1 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.5%)
+       Dist. : std=0.265 | aty=0.263 | spe=0.230 | fra=0.242
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → FAIBLE
+       → Profil dans les normes réglementaires
+
+  ✓ [FAIBLE] Hamidou Diallo
+     Ville/Quartier : Ouagadougou / Niogsin
+     Label réel     : STANDARD
+     Score fusion   : 1 pts
+
+     ▸ NEURAL  → STANDARD (confiance=26.5%)
+       Dist. : std=0.265 | aty=0.244 | spe=0.236 | fra=0.255
+     ▸ PROLOG → 1 règle(s) déclenchée(s)
+       [B4] Non-mise en valeur (>180j sans cession)
+     ▸ DÉCISION FINALE → FAIBLE
+       → Profil dans les normes réglementaires
+
+────────────────────────────────────────────────────────────────────
+INFÉRENCE PROBABILISTE (ProbLog)
+────────────────────────────────────────────────────────────────────
+
+  ⚠ Prête-nom Idrissa/Aziz                        █████████████████████████ 100.0%  [CRITIQUE]
+  ⚠ Prête-nom familial Idrissa/Aziz               █████████████████████████ 100.0%  [CRITIQUE]
+  ⚠ Prête-nom Kassoum/Mariam                      ████████████████████████░ 100.0%  [CRITIQUE]
+  ⚠ Accaparement Idrissa (Secteur 30)             █████████████████████████ 100.0%  [CRITIQUE]
+  ▲ Revente rapide Romuald                        █████████████████░░░░░░░░ 70.0%  [ÉLEVÉ]
+  ▲ Plus-value Gaoussou (+133%)                   ██████████████████░░░░░░░ 75.0%  [ÉLEVÉ]
+  ► Spéculateur confirmé Romuald                  ███████████░░░░░░░░░░░░░░ 46.2%  [MOYEN]
+  ⚠ Conflit familial Sawadogo/Kassoum             ████████████████████░░░░░ 80.0%  [CRITIQUE]
+  ⚠ Conflit familial Sawadogo/Mariam              ████████████████████░░░░░ 80.0%  [CRITIQUE]
+  ⚠ Auto-attribution Ramata                       ███████████████████████░░ 95.0%  [CRITIQUE]
+  ⚠ Auto-attribution Luc Traoré                   ███████████████████████░░ 95.0%  [CRITIQUE]
+  ⚠ Conflit notaire Saidou                        ██████████████████████░░░ 90.0%  [CRITIQUE]
+  ⚠ Réseau circulaire Kassoum                     █████████████████████░░░░ 85.0%  [CRITIQUE]
+  ▲ Promoteur fantôme Marcelline                  █████████████████░░░░░░░░ 70.0%  [ÉLEVÉ]
+  ⚠ Suspicion globale Kassoum                     ████████████████████████░ 98.5%  [CRITIQUE]
+  ▲ Suspicion globale Idrissa                     ████████████████░░░░░░░░░ 67.0%  [ÉLEVÉ]
+  ⚠ Suspicion globale Ramata                      ████████████████████████░ 97.2%  [CRITIQUE]
+  ✓ Suspicion globale Romuald                     █████░░░░░░░░░░░░░░░░░░░░ 23.1%  [FAIBLE]
+  ✓ Suspicion globale Adama (sain)                ░░░░░░░░░░░░░░░░░░░░░░░░░ 0.0%  [FAIBLE]
+
+────────────────────────────────────────────────────────────────────
+STATISTIQUES FINALES
+────────────────────────────────────────────────────────────────────
+
+  Total dossiers analysés  : 50
+  Accuracy réseau neuronal : 36.0%
+  Alertes CRITIQUE         : 17
+  Alertes ÉLEVÉ            : 16
+  Alertes MOYEN            : 9
+  Profils FAIBLE           : 8
+  Total alertes Prolog     : 147
+  Requêtes ProbLog         : 19
+
+════════════════════════════════════════════════════════════════════
